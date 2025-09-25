@@ -1,0 +1,36 @@
+# Core AI/ML
+numpy
+pandas
+scikit-learn
+joblib
+matplotlib
+seaborn
+
+# Model Tracking & Experimentation
+mlflow
+dvc[s3]
+feast
+
+# API & Serving
+fastapi
+uvicorn
+
+# Workflow Orchestration
+apache-airflow
+
+# Monitoring & Logging
+prometheus-client
+loguru
+
+# Cloud & Storage
+boto3
+python-dotenv
+
+# Testing
+pytest
+requests
+
+# Optional but useful
+jupyter
+black
+flake8
