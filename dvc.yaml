@@ -1,0 +1,26 @@
+stages:
+  ingest_data:
+    cmd: python src/data_ingestion.py
+    deps:
+    - data/sample_data.csv
+    outs:
+    - data/raw/raw_data.csv
+  preprocess_data:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - data/raw/raw_data.csv
+    outs:
+    - data/processed/processed_data.csv
+  train_model:
+    cmd: python src/train_model.py
+    deps:
+    - data/processed/processed_data.csv
+    outs:
+    - model/model.pkl
+  evaluate_model:
+    cmd: python src/evaluate_model.py
+    deps:
+    - model/model.pkl
+    metrics:
+    - metrics.json:
+        cache: false
